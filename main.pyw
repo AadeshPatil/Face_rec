@@ -19,7 +19,7 @@ import datetime as dt
 class Face_Recognition_system:
     def __init__(self , root):
         self.root = root
-        self.root.geometry("1530x790+0+0")
+        self.root.geometry("1920x1080+-1+0")
         self.root.title("Superior Security")
         self.root.iconbitmap('icon.ico')        
 
@@ -28,14 +28,14 @@ class Face_Recognition_system:
         #navbar img 
  #img1
         img=Image.open(r"img\facialrecognition.jpeg")
-        img=img.resize((500,130),Image.ANTIALIAS)
+        img=img.resize((600,130),Image.ANTIALIAS)
         self.photoimg=ImageTk.PhotoImage(img)
         
         f_lbl=Label(self.root,image=self.photoimg)
-        f_lbl.place(x=0,y=0,width=500,height=130)
+        f_lbl.place(x=0,y=0,width=600,height=130)
 #img2
         title_lbl=Label(self.root,text="SUPERIOR SECURITY",font=("times new romen",25,"bold"),bg="black",fg='white')
-        title_lbl.place(x=450,y=0,width=500,height=130)
+        title_lbl.place(x=600,y=0,width=600,height=130)
        
         def time():
                 string =strftime('%H:%M:%S %p')
@@ -48,11 +48,11 @@ class Face_Recognition_system:
 
 #img3
         img2=Image.open(r"img\facialrecognition - Copy.jpeg")
-        img2=img2.resize((500,130),Image.ANTIALIAS)
+        img2=img2.resize((600,130),Image.ANTIALIAS)
         self.photoimg2=ImageTk.PhotoImage(img2)
         
         f_lbl=Label(self.root,image=self.photoimg2)
-        f_lbl.place(x=900,y=0,width=500,height=130)
+        f_lbl.place(x=1200,y=0,width=600,height=130)
 
 #bg image
         bg_img=Label(self.root,bg="#0da697")

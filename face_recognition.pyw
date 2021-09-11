@@ -101,10 +101,10 @@ class face_recognition:
                 i="+".join(i)
 
                 if confidence>80:
-                    cv2.putText(img, f"ID:{i}", (x,y-80),cv2.FONT_HERSHEY_COMPLEX,0.8,(255,255,255),1)
-                    cv2.putText(img, f"Name:{n}", (x,y-55),cv2.FONT_HERSHEY_COMPLEX,0.8,(255,255,255),1)
-                    cv2.putText(img, f"Email:{e}", (x,y-30),cv2.FONT_HERSHEY_COMPLEX,0.8,(255,255,255),1)
-                    cv2.putText(img, f"Age:{a}", (x,y-5),cv2.FONT_HERSHEY_COMPLEX,0.8,(255,255,255),1)
+                    cv2.putText(img, f"ID:{i}", (x,y-80),cv2.FONT_HERSHEY_COMPLEX,0.8,(0, 255, 0),1)
+                    cv2.putText(img, f"Name:{n}", (x,y-55),cv2.FONT_HERSHEY_COMPLEX,0.8,(0, 255, 0),1)
+                    cv2.putText(img, f"Email:{e}", (x,y-30),cv2.FONT_HERSHEY_COMPLEX,0.8,(0, 255, 0),1)
+                    cv2.putText(img, f"Age:{a}", (x,y-5),cv2.FONT_HERSHEY_COMPLEX,0.8,(0, 255, 0),1)
                     self.my_attendnce(i, n, e, a)
                 else:
                      cv2.rectangle(img,(x,y),(x+w,y+h),(0,0,255),3)

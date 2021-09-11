@@ -71,11 +71,10 @@ class Train:
                 
                 # Train the claassifier and save *
 
-                clf=cv2.face.LBPHFaceRecognizer_create()
+                clf=cv2.face.LBPHFaceRecognizer_create() 
                 clf.train(faces,np.array(ids))
                 clf.write("classifier.xml")
                 cv2.destroyAllWindows()
-                playsound("audio/trained.mp3")
                 messagebox.showinfo("result","Training Dataset completed !!",parent=self.root)
             
       
