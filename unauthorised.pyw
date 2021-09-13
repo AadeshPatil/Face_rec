@@ -59,7 +59,7 @@ class Unautharise:
         scroll_x=ttk.Scrollbar(table_frame,orient=HORIZONTAL)
         scroll_y=ttk.Scrollbar(table_frame,orient=VERTICAL)
         
-        self.UnAccess_table=ttk.Treeview(table_frame,column=("srNo","date","time","photo"),xscrollcommand=scroll_x.set,yscrollcommand=scroll_y.set)
+        self.UnAccess_table=ttk.Treeview(table_frame,column=("srNo","date","time","path"),xscrollcommand=scroll_x.set,yscrollcommand=scroll_y.set)
 
         scroll_x.pack(side=BOTTOM,fill=X)
         scroll_y.pack(side=RIGHT,fill=Y)
@@ -71,14 +71,14 @@ class Unautharise:
         self.UnAccess_table.heading("srNo",text="srNo")
         self.UnAccess_table.heading("date",text="Date")
         self.UnAccess_table.heading("time",text="Time")
-        self.UnAccess_table.heading("photo",text="photo")
+        self.UnAccess_table.heading("path",text="path")
         self.UnAccess_table["show"]="headings"
 
 
         self.UnAccess_table.column("srNo",width=1)
         self.UnAccess_table.column("date",width=20)
         self.UnAccess_table.column("time",width=20)
-        self.UnAccess_table.column("photo",width=20)
+        self.UnAccess_table.column("path",width=20)
     
         self.UnAccess_table.pack(fill=BOTH,expand=1)
         self.UnAccess_table.bind("<ButtonRelease>",self.get_cursor)
