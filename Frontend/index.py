@@ -24,7 +24,7 @@ progress=Progressbar(w,style="red.Horizontal.TProgressbar",orient=HORIZONTAL,len
 
 # import main file
 def new_win():
-  os.system('python login.pyw')
+  os.system('python login.py')
 
 
 # progress bar
