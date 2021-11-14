@@ -1,20 +1,15 @@
-from tkinter import *
-from tkinter import ttk
-from PIL import Image,ImageTk
-from tkinter import messagebox
-import mysql.connector
-from regester import Register
-import os
-import sys
-from main import Face_Recognition_system 
-from cv2 import *
-from time import strftime
-from datetime import datetime
 import datetime as dt
 import random
-from main import Face_Recognition_system
-from playsound import playsound
+from datetime import datetime
+from tkinter import *
+from tkinter import messagebox
+from tkinter import ttk
 
+import mysql.connector
+from PIL import Image, ImageTk
+import cv2
+
+from main import Face_Recognition_system
 
 
 class Login_data:
@@ -168,7 +163,7 @@ class Login_data:
                     messagebox.showinfo("success","You password reset succefully..!",parent=self.root2)
                     self.resets()
                     self.root2.destroy()
-                    
+                    #success
             
             except Exception as es:
                 messagebox.showerror("Error",f"Error due to: {str(es)}",parent=self.root)
