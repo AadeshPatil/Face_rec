@@ -103,7 +103,7 @@ class face_recognition:
                 i = my_curser.fetchone()
                 i = "+".join(i)
 
-                if confidence > 80:
+                if confidence > 60:
                     cv2.putText(img, f"ID: {i}", (x, y-80), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 25, 255), 1)
                     cv2.putText(img, f"Name: {n}", (x, y-55), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 25, 255), 1)
                     cv2.putText(img, f"Email: {e}", (x, y-30), cv2.FONT_HERSHEY_COMPLEX, 0.8, (255, 25, 255), 1)
@@ -134,8 +134,20 @@ class face_recognition:
                 # img = cv2.imread("image.jpg")
                 height, width, _ = img.shape
                 if img is not None:
-                    img = recognize(img, clf,faceCascade)
-                    resized_img = cv2.resize(img, (height-500, width-500))
+                    original_height, original_width, _ = img.shape
+                    aspect_ratio = original_width / original_height
+                    max_display_width = 800  # Maximum allowed width for the displayed image
+                    max_display_height = 600  # Maximum allowed height for the displayed image
+
+                    # Calculate new width and height while maintaining the aspect ratio
+                    display_width = min(original_width, max_display_width)
+                    display_height = int(display_width / aspect_ratio)
+                    if display_height > max_display_height:
+                        display_height = max_display_height
+                        display_width = int(display_height * aspect_ratio)
+
+                    img = recognize(img, clf, faceCascade)
+                    resized_img = cv2.resize(img, (display_width, display_height))
                     cv2.imshow("FACE RECOGNITION", resized_img)
                     cv2.waitKey(0)
                     cv2.destroyAllWindows()

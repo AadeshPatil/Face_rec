@@ -87,9 +87,9 @@ class Dataset:
             "times new romen", 12, "bold"), bg="white")
         srNo_label.grid(row=0, column=0, padx=0)
 
-        srNo_entry = Entry(root, textvariable=self.var_name, width=20, font=(
-            "times new romen", 12, "bold"), bg="lightgray")
-        srNo_entry.grid(row=0, column=0, padx=0, pady=0)
+        # srNo_entry = Entry(root, textvariable=self.var_name, width=20, font=(
+        #     "times new romen", 12, "bold"), bg="lightgray")
+        # srNo_entry.grid(row=0, column=0, padx=0, pady=0)
         # name
         name_label = Label(class_frame, text=" Name ", font=(
             "times new romen", 12, "bold"), bg="white")
