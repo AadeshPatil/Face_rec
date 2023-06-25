@@ -1,9 +1,0 @@
-pip install tk
-pip install pillow
-pip install mysql-connector
-pip install opencv-contrib-python
-pip install bs4
-pip install pyttsx3
-pip install requests 
-pip install opencv-python
-pip install playsound
